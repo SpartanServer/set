@@ -176,9 +176,11 @@ PROMPT2='%F{154}>>%{${reset_color}%}'
 #export PATH=$HOME/.gem/ruby/2.4.0/bin:$PATH
 
 export http_proxy=http://proxy1.eng.u-hyogo.ac.jp:8080
-export https_proxy=https://proxy1.eng.u-hyogo.ac.jp:8080
+export https_proxy=http://proxy1.eng.u-hyogo.ac.jp:8080
 export ftp_proxy=ftp://proxy1.eng.u-hyogo.ac.jp:8080
 export TERM=xterm-256color
+
+export PATH="$PATH:$HOME/bin"
 
 alias sudo="sudo -E"
 #alias vim="nvim"
@@ -203,3 +205,11 @@ function google() {
     fi
     w3m http://www.google.co.jp/$opt
 }
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+#export PATH="$PYENV_ROOT/versions/anaconda3-5.1.0/bin:$PATH"
+#export PATH="$PYENV_ROOT/versions/miniconda3-4.3.30/bin:$PATH"
+
+# added by Anaconda3 installer
+#export PATH="/home/kishi/anaconda3/bin:$PATH"
